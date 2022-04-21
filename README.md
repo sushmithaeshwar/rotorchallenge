@@ -1,4 +1,4 @@
-# rotorchallenge
+# Rotor Challenge
 Rotor Studios interview challenge
 
 
@@ -7,7 +7,7 @@ Rotor Studios interview challenge
 1. The script cluster_destroy.sh is to be configured on a Linux based server.
 2. The script cluster_destroy.sh is to be scheduled to run at 1 AM everyday.
 
-# Steps to expose the EKS service
+## Steps to expose the EKS service
 
 This is achieved using the Loadbalancer service available on AWS
 
