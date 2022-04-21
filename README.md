@@ -15,3 +15,10 @@ This is achieved using the Loadbalancer service available on AWS
 2. Ensure to use the matching selector for the pods
 3. Expose the target port that matches the container port specified in the kubernetes_deployment resource.
 4. Once the loadbalancer is created, fetch the DNS name from the Loadbalancer to access the application.
+
+
+### Note: In order to execute these scripts, the following IAM roles/policies are necessary
+
+AmazonEKSClusterPolicy
+AmazonEKSWorkerNodePolicy
+AmazonVPCFullAccess (In a real world scenario, it would be recommended to use custom policies to specify the roles explicitly)
