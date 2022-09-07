@@ -20,3 +20,4 @@ jobs:
         uses: sushmithaeshwar/composite-gha-action@v1
         with:
           channel-id: 'gha'
+          slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
