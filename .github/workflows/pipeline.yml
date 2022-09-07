@@ -10,15 +10,20 @@ on:
   workflow_dispatch:
 
 jobs:
+
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Slack notify
-        uses: sushmithaeshwar/composite-gha-action@v1
-        if: always()
-        with:
-          channel-id: gha
-          slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
       - name: Run a one-line script
         run: ech Hello, world!
+        
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Slack notify workflow run status
+       uses: sushmithaeshwar/composite-gha-action@v1
+       if: always()
+       with:
+         channel-id: gha
+         slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }} 
           
