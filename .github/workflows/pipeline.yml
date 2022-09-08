@@ -25,7 +25,4 @@ jobs:
        if: always()
        with:
          channel-id: gha
-         slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }} 
-     - uses: martialonline/workflow-status@v2
-       id: check
-     - run: echo ${{ steps.check.outputs.status }}
+         slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
