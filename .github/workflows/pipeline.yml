@@ -19,6 +19,7 @@ jobs:
         
   notify:
     runs-on: ubuntu-latest
+    needs: [build]
     steps:
      - name: Slack notify workflow run status
        uses: sushmithaeshwar/composite-gha-action@v1
